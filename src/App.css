@@ -1,7 +1,21 @@
-::-webkit-input-placeholder  { color: #fff;; }
-input:-moz-placeholder { color:#fff; }
-textarea:-moz-placeholder { color:#4fff; }
+/*Para mudar a cor do placeholder*/
+::-webkit-input-placeholder  { color: #fff; opacity: 0.7;; }
+input:-moz-placeholder { color:#fff; opacity: 0.7;}
+textarea:-moz-placeholder { color:#4fff; opacity: 0.7; }
 
+/*Para tornar o placeholder transparente ao clicar no input*/
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
+ input:focus:-moz-placeholder { /* Firefox 18- */
+    color: transparent;  
+ }
+ input:focus::-moz-placeholder {  /* Firefox 19+ */
+    color: transparent;  
+ }
+ input:focus:-ms-input-placeholder {  
+    color: transparent;  
+ }
 
 .app {
     display: flex;
@@ -10,31 +24,46 @@ textarea:-moz-placeholder { color:#4fff; }
     margin: 10vh 20vw;
     padding: 5vh 0;
     border: solid rgb(15, 15, 126);
-    background-color: rgb(15, 15, 126);
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    background-color: rgb(15, 15, 126);
 }
 
 .app .title {
     color: white;
-    padding-bottom: 10vh;
+    padding-bottom: 8vh;
+}
+.app form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.app .input {
-    border-radius: 5px;
-    padding: 3vh 1.5vw;
+.app .input-form {
+    text-align: center;
+}
+
+.app form input {
     color: white;
-    background-color: rgb(61, 61, 235);
-    margin: 0 2vw;
     font-weight: 700;
+    text-align: center;
+    margin: 1vh 1vw;
+    padding: 3vh 1.5vw;
+    border-radius: 5px;
+    background-color: rgb(61, 61, 235);
 }
 
-.app button{
-    margin-top: 1vh;
-    padding: 1vh 2vw;
-    background-color: rgb(61, 61, 235);
+.app form button{
+    width: 60px;
+    height: 40px;
+    margin-top: 5vh;
+    font-weight: 700;
+    font-size: 20px;
     color: #fff;
+    justify-content: flex-end;
     border: none;
     border-radius: 5px 15px;
+    background-color: rgb(61, 61, 235);
     transition: 0.5s;
 }
 

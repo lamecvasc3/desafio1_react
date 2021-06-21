@@ -27,8 +27,10 @@ const App = () => {
         <div className="app">
             <h2 className="title">{process.env.REACT_APP_TITLE}</h2>
             <form onSubmit={handleSubmit}>
-                <input className="input" placeholder="Digite um número" value={newFirstValue} type="number" onChange={handleFirstNumberChange}></input>
-                <input className="input" placeholder="Digite um número" value={newSecondValue} type="number" onChange={handleSecondNumberChange}></input>
+                <div className="input-form">
+                    <input placeholder="Digite um número" value={newFirstValue} type="number" onChange={handleFirstNumberChange}></input>
+                    <input placeholder="Digite um número" value={newSecondValue} type="number" onChange={handleSecondNumberChange}></input>
+                </div>
                 <button type="submit">+</button>
             </form>
             <Sum firstInt={firstValue} secondInt={secondValue}/>
