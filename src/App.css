@@ -35,4 +35,11 @@ textarea:-moz-placeholder { color:#4fff; }
     color: #fff;
     border: none;
     border-radius: 5px 15px;
+    transition: 0.5s;
 }
+
+.app button:hover{
+    cursor: pointer;
+    background-color: rgb(48, 48, 143);
+}
+
